@@ -1,0 +1,167 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2f3a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para apilar los elementos */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Estilo para los títulos */
+h3 {
+    font-size: 22px;
+    color: #f8f9fa;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los cuadros de texto */
+.console {
+    width: 70%; /* Hacer los cuadros de texto más anchos */
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Espacio entre los campos de texto */
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    background-color: #444;
+    color: white;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px; /* Ajustado para que sea más pequeño */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button2 {
+    background-color: #01152a;
+    color: white;
+    padding: 5px 15px; /* Ajustado para que sea más pequeño */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilo para el contenedor de graficado */
+#diagrama {
+    width: 70%;
+    margin-top: 20px;
+    background-color: #23243a; /* Fondo oscuro igual a la interfaz */
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+#graphviz-render svg {
+    background: #23243a !important;
+}
+
+/* Mejorar contraste de líneas y nodos en SVG */
+#graphviz-render svg g edge path {
+    stroke: #fff !important;
+}
+#graphviz-render svg g node polygon,
+#graphviz-render svg g node ellipse,
+#graphviz-render svg g node rect {
+    stroke: #fff !important;
+    stroke-width: 2px;
+}
+
+/* Estilo para el código Graphviz */
+.graphviz-code {
+    background-color: #181818;
+    color: #f8f9fa;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+/* Añadir sombras suaves a las áreas de entrada */
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* Estilo para la tabla de rutas generadas */
+#rutasTabla {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #23243a;
+    color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+#rutasTabla th, #rutasTabla td {
+    border: 1px solid #444a5a;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 16px;
+}
+#rutasTabla tr:nth-child(even) {
+    background-color: #2c2f3a;
+}
+#rutasTabla tr:nth-child(odd) {
+    background-color: #23243a;
+}
+#rutasTabla th {
+    background-color: #1a1b2e;
+    color: #ffda79;
+    font-size: 18px;
+    font-weight: bold;
+}
+#rutasTabla td {
+    border-left: 3px solid #007bff;
+}
+#rutasTabla tr:hover {
+    background-color: #35365c;
+    transition: background 0.2s;
+}

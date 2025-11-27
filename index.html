@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPathScripter</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="console" id="nodos">
+            <h3>Nodos:</h3>
+            <textarea id="nodosInput"></textarea>
+        </div>
+        <div class="console" id="conexiones">
+            <h3>Conexiones:</h3>
+            <textarea id="conexionesInput"></textarea>
+        </div>
+        <div class="button-container">
+            <button id="graficarBtn">Graficar</button>
+        </div>
+        <div id="diagrama"></div>
+
+        <!-- Tabla para mostrar las rutas generadas -->
+        <h3>Script:</h3>
+        <table id="rutasTabla">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Caso de Prueba</th>
+                </tr>
+            </thead>
+            <tbody id="rutasBody">
+                <!-- Aquí se llenarán las rutas generadas -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Cargar viz.js desde CDN antes de app.js -->
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js" type="application/javascript"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
